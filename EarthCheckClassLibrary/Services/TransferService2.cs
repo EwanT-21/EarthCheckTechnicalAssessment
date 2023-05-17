@@ -34,11 +34,12 @@ namespace EarthCheckAssessment.Services
         }
 
         /// <summary>
-        /// If a withdrawal occurs, we charge a fee of 2% of the overdraw
+        /// If a withdrawal occurs, we charge a fee of 2% of the overdraw, this method will calculate and return this 
+        /// accordingly.
         /// </summary>
         /// <param name="withdrawalAccount"></param>
         /// <param name="amount"></param>
-        /// <returns></returns>
+        /// <returns>The withdrawal fee cost.</returns>
         private static double CalculateOverdrawFee(Account withdrawalAccount, double amount) => 
             (double)Math.Round((amount - withdrawalAccount.Balance) * 0.02, 2);
 
