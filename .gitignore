@@ -3,3 +3,5 @@
 *.v2
 *.vsidx
 .vs/
+[Bb]in/
+[Oo]bj/
