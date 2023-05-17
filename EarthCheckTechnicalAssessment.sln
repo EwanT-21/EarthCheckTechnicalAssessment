@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EarthCheckClassLibrary", "EarthCheckClassLibrary\EarthCheckClassLibrary.csproj", "{7116B8B6-8BD5-4505-9D20-10B4C763AB23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EarthCheckTests", "EarthCheckTests\EarthCheckTests.csproj", "{D0D9ED18-6D78-41F5-8F9E-DF7194EE73CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7116B8B6-8BD5-4505-9D20-10B4C763AB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7116B8B6-8BD5-4505-9D20-10B4C763AB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7116B8B6-8BD5-4505-9D20-10B4C763AB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7116B8B6-8BD5-4505-9D20-10B4C763AB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D9ED18-6D78-41F5-8F9E-DF7194EE73CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D9ED18-6D78-41F5-8F9E-DF7194EE73CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D9ED18-6D78-41F5-8F9E-DF7194EE73CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D9ED18-6D78-41F5-8F9E-DF7194EE73CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEFF7AA9-B818-4DEC-BB63-3BF704C02C36}
+	EndGlobalSection
+EndGlobal
