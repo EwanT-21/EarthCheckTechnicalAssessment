@@ -22,19 +22,25 @@ namespace EarthCheckAssessment.Services
             if (amount < 0 || account1.Balance < 0 || account1.AccountNumber == account2.AccountNumber)
                 return false;
 
-            var withdrawAmount = amount;
+            var overdrawFee = 0d;
             if (account1.Balance.CompareTo(amount) < 0)
             {
-                withdrawAmount = HandleOverdraw(account1, amount);
+                overdrawFee = CalculateOverdrawFee(account1, amount);
             }
 
-            account1.Withdraw(withdrawAmount);
+            account1.Withdraw(amount + overdrawFee);
             account2.Deposit(amount);
             return true;
         }
 
-        private static double HandleOverdraw(Account withdrawalAccount, double amount) => 
-            amount + (double)Math.Round((amount - withdrawalAccount.Balance) * 0.02, 2);
+        /// <summary>
+        /// If a withdrawal occurs, we charge a fee of 2% of the overdraw
+        /// </summary>
+        /// <param name="withdrawalAccount"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        private static double CalculateOverdrawFee(Account withdrawalAccount, double amount) => 
+            (double)Math.Round((amount - withdrawalAccount.Balance) * 0.02, 2);
 
     }
 }
