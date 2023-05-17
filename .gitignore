@@ -1,0 +1,5 @@
+*.suo
+.suo
+*.v2
+*.vsidx
+.vs/
