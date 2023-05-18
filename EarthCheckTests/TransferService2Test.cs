@@ -37,7 +37,8 @@ namespace TestProject1
             var account1 = new Account(234, balance);
             var account2 = new Account(2345, 30);
             Assert.True(TransferService2.TransferBetweenAccounts(account1, account2, amount));
-            // To ensure our withdrawal was correctly
+            // To ensure our withdrawal was correctly calculated, we must simply add the amount and withdrawal fee
+            // back to our current balance and we should recieve the initial.
             Assert.True((account1.Balance + (amount + withdrawalFee)).CompareTo(balance) == 0);
         }
 
