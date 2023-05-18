@@ -11,6 +11,7 @@ namespace EarthCheckAssessment.Services
     {
         /// <summary>
         /// This method calculates the withdrawal from account1 by amount if possible, and deposits the amount into account 2.
+        /// Overdrawing is invalid and the given amount must be positive.
         /// </summary>
         /// <param name="account1">The withdrawal accounut</param>
         /// <param name="account2">The deposit account</param>

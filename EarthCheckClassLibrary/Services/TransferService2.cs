@@ -12,11 +12,12 @@ namespace EarthCheckAssessment.Services
     {
         /// <summary>
         /// This method calculates the withdrawal from account1 by amount if possible, and deposits the amount into account 2.
+        /// If an overdrawal occurs, a fee is calculated and charged to the account withdrawing.
         /// </summary>
         /// <param name="account1">The withdrawal accounut</param>
         /// <param name="account2">The deposit account</param>
         /// <param name="amount">The amount to withdraw and deposit</param>
-        /// <returns>A boolean representing a successful transaction, i.e. overdrawal will not occur.</returns>
+        /// <returns>A boolean representing a successful transaction, i.e. amount is non-negative.</returns>
         public static bool TransferBetweenAccounts(Account account1, Account account2, double amount)
         {
             if (amount < 0 || account1.Balance < 0 || account1.AccountNumber == account2.AccountNumber)
